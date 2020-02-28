@@ -1,0 +1,35 @@
+`timescale 1 ns / 1 ps
+
+module state(
+	input logic clk, draw_clk, reset, write_done, //nextstate, cleanman,
+	output logic [9:0] x,
+	output logic [8:0] y,
+	output logic cleared
+);
+	enum{normal, cleans} ns, ps;
+	logic [31:0] count;
+	always_comb begin
+		case(ps)
+			
+			normal: begin if(write_done/*||cleanman*/) ns = cleans; else ns = ps;  end
+			cleans: begin if(cleared) ns = normal; else ns = ps;  end
+		endcase
+	end
+	
+	always_ff @(posedge clk) begin
+		if(reset||~write_done) begin
+			x <= 0;
+			y <= 0;
+			ps <= normal;
+			cleared <= 0;
+		end 
+		else	
+		if( x <= 640 && y <= 480 ) begin
+			x <= x+1;
+			if(x == 640) begin y <= y+1; x <= 0;end
+			cleared <= 0;
+		end else begin  cleared <= 1; /*if(cleanman) begin x<=0; y<=0;end*/ end
+	   ps <= ns;
+	end
+
+endmodule

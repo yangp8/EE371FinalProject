@@ -1,0 +1,8 @@
+module state()
+	enum{clean, normal} ns, ps;
+	always_comb begin
+		case(ps)
+			clean: if(count== )
+			normal:
+	end
+endmodule

@@ -1,0 +1,56 @@
+module cyclestate(
+	input logic clk, reset, write_done,
+	output logic [9:0] x, x0, x1,
+	output logic [8:0] y, y0, y1,
+	output logic pixel_color
+);
+	logic clean, cleandown;
+	enum{left, up, right, down} ns, ps;
+	logic [31:0] count;
+	always_comb begin
+		case(ps)
+			left:	begin	
+						x0 = 200;
+						y0 = 200;
+						x1 = 10;
+						y1 = 200;
+						if(~write_done) begin
+							pixel_color = 1'b1; clean = 0; end
+						else begin pixel_color = 1'b0; clean = 1; end
+						if(cleared) ns = up; else ns = ps;
+					end
+			up:	begin	
+						x0 = 200;
+						y0 = 200;
+						x1 = 200;
+						y1 = 10;
+						if(~write_done) begin
+							pixel_color = 1'b1; clean = 0; end
+						else begin pixel_color = 1'b0; clean = 1; end
+						if(cleared) ns = right; else ns = ps;
+					end
+			right:	begin	
+						x0 = 200;
+						y0 = 200;
+						x1 = 390;
+						y1 = 200;
+						if(~write_done) begin
+							pixel_color = 1'b1; clean = 0; end
+						else begin pixel_color = 1'b0; clean = 1; end
+						if(cleared) ns = down; else ns = ps;
+					end
+			down:	begin	
+						x0 = 200;
+						y0 = 200;
+						x1 = 200;
+						y1 = 390;
+						if(~write_done) begin
+							pixel_color = 1'b1; clean = 0; end
+						else begin pixel_color = 1'b0; clean = 1; end
+						if(cleared) ns = left; else ns = ps;
+					end
+		endcase
+	end
+	
+	state cl (.clk(CLOCK_50), .reset, .x(cx), .y(cy), .cleaning);
+endmodule

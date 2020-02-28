@@ -1,0 +1,19 @@
+//a counter that loops from 0 to 31
+//go through whole read address based on clock
+module counter (ReadAddress, clk, reset);
+	output logic [4:0] ReadAddress;
+	input logic clk, reset;
+	logic [4:0] count;
+	
+
+
+	
+	always_ff @(posedge clk) begin
+		if(reset) count <= 0; 
+		else if (count == 5'b11111) count <= 5'b00000;
+		else count <= count + 1;
+	end
+	assign ReadAddress = count;
+endmodule
+
+

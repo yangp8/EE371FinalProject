@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "write_done",
+					"strict" : false
+				},
+				{
+					"name" : "rx[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rx[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rx[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rx[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rx[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rx[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rx[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rx[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rx[8]",
+					"strict" : false
+				},
+				{
+					"name" : "rx[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ry[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ry[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ry[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ry[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ry[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ry[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ry[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ry[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ry[8]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "cleared",
+					"strict" : false
+				},
+				{
+					"name" : "score",
+					"strict" : false
+				},
+				{
+					"name" : "draw_clk",
+					"strict" : false
+				},
+				{
+					"name" : "direction[0]",
+					"strict" : false
+				},
+				{
+					"name" : "direction[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

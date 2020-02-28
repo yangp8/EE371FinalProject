@@ -1,0 +1,289 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/17.0/labs/ee371lab3
+vcounter
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1581049978
+!i10b 1
+!s100 2k5=QI@1X]d>SA==QM1CE1
+IM`QQ[I9S9T6O42HjPnfBm1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 counter_sv_unit
+S1
+Z4 dC:/intelFPGA_lite/17.0/labs/ee371lab3 task3 - Copy
+w1580944924
+8./counter.sv
+F./counter.sv
+L0 3
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1581049978.000000
+!s107 ./counter.sv|
+!s90 -reportprogress|300|./counter.sv|
+!i113 1
+Z7 tCvgOpt 0
+vcyclestate
+R1
+R2
+!i10b 1
+!s100 Km52>2^DmFH9jed9`o`@L0
+I1UEbP8YS2_NVDm@:cM]JK0
+R3
+!s105 cyclestate_sv_unit
+S1
+R4
+w1581023198
+8./cyclestate.sv
+F./cyclestate.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 ./cyclestate.sv|
+!s90 -reportprogress|300|./cyclestate.sv|
+!i113 1
+R7
+vDE1_SoC
+R1
+Z8 !s110 1581049977
+!i10b 1
+!s100 HMi_G:<am:D1EK?`^cga=2
+I6cWQVS7C=3jbbN@AH8YV:1
+R3
+Z9 !s105 DE1_SoC_sv_unit
+S1
+R4
+Z10 w1581049972
+Z11 8./DE1_SoC.sv
+Z12 F./DE1_SoC.sv
+L0 3
+R5
+r1
+!s85 0
+31
+Z13 !s108 1581049977.000000
+Z14 !s107 ./DE1_SoC.sv|
+Z15 !s90 -reportprogress|300|./DE1_SoC.sv|
+!i113 1
+R7
+n@d@e1_@so@c
+vDE1_SoC_testbench
+R1
+R8
+!i10b 1
+!s100 T_4L6MfQAUjze_<YXIGCd1
+IA]LR?7U3XQN]^hMiGA=VD2
+R3
+R9
+S1
+R4
+R10
+R11
+R12
+L0 58
+R5
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 1
+R7
+n@d@e1_@so@c_testbench
+vline_drawer
+R1
+R8
+!i10b 1
+!s100 :4Mj;2N`2KoNI]jL<K09;2
+II__CAgPhCcJC[be56<NGb1
+R3
+Z16 !s105 line_drawer_sv_unit
+S1
+R4
+Z17 w1580972240
+Z18 8./line_drawer.sv
+Z19 F./line_drawer.sv
+L0 2
+R5
+r1
+!s85 0
+31
+R13
+Z20 !s107 ./line_drawer.sv|
+Z21 !s90 -reportprogress|300|./line_drawer.sv|
+!i113 1
+R7
+vline_drawer_testbench
+R1
+R8
+!i10b 1
+!s100 aN7IAUl7Ill[cGW]QNA6j1
+I79>jkP40jXg@c1PcI_VNS0
+R3
+R16
+S1
+R4
+R17
+R18
+R19
+L0 94
+R5
+r1
+!s85 0
+31
+R13
+R20
+R21
+!i113 1
+R7
+vline_drawerbackup
+R1
+Z22 !s110 1580804820
+!i10b 1
+!s100 RTQJ<BZHhe2hZ:LgXTZ4D3
+I0Vd14XE<l?2LRkZCMPhCA3
+R3
+Z23 !s105 line_drawerbackup_sv_unit
+S1
+R0
+Z24 w1580804818
+Z25 8./line_drawerbackup.sv
+Z26 F./line_drawerbackup.sv
+L0 2
+R5
+r1
+!s85 0
+31
+Z27 !s108 1580804820.000000
+Z28 !s107 ./line_drawerbackup.sv|
+Z29 !s90 -reportprogress|300|./line_drawerbackup.sv|
+!i113 1
+R7
+vline_drawerbackup_testbench
+R1
+R22
+!i10b 1
+!s100 iAC[IXC@bR43NI:8HiYXE3
+Il<1;k_X0kW<;0@]`G=dn;3
+R3
+R23
+S1
+R0
+R24
+R25
+R26
+L0 108
+R5
+r1
+!s85 0
+31
+R27
+R28
+R29
+!i113 1
+R7
+vsnake
+R1
+Z30 !s110 1582873368
+!i10b 1
+!s100 2ZjTfJ4g<B7``1HLOZ3iS0
+IZm_JU[T0Nmd16`Uo9`43d3
+R3
+Z31 !s105 snake_sv_unit
+S1
+Z32 dC:/intelFPGA_lite/17.0/labs/ee371lab6
+Z33 w1582873364
+Z34 8./snake.sv
+Z35 F./snake.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z36 !s108 1582873368.000000
+Z37 !s107 ./snake.sv|
+Z38 !s90 -reportprogress|300|./snake.sv|
+!i113 1
+R7
+vsnake_testbench
+R1
+R30
+!i10b 1
+!s100 24lHI?<k`zoh<MjTO<n6:1
+IHhDi01Hi:k1147ag=L<4A1
+R3
+R31
+S1
+R32
+R33
+R34
+R35
+L0 86
+R5
+r1
+!s85 0
+31
+R36
+R37
+R38
+!i113 1
+R7
+vstate
+R1
+R2
+!i10b 1
+!s100 cRKB;C]@2jfzoYN4X:Sc52
+IXNa_A7<bCjiFfGCDYMcQ<2
+R3
+!s105 state_sv_unit
+S1
+R4
+w1581049927
+8./state.sv
+F./state.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R6
+!s107 ./state.sv|
+!s90 -reportprogress|300|./state.sv|
+!i113 1
+R7
+vVGA_framebuffer
+R1
+R2
+!i10b 1
+!s100 SAf9?AgIzngjVX;Di_QRV1
+IVTBN^K:IOE;kK7M4CWVAS2
+R3
+!s105 VGA_framebuffer_sv_unit
+S1
+R4
+w1581022198
+8./VGA_framebuffer.sv
+F./VGA_framebuffer.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R13
+!s107 ./VGA_framebuffer.sv|
+!s90 -reportprogress|300|./VGA_framebuffer.sv|
+!i113 1
+R7
+n@v@g@a_framebuffer

@@ -1,0 +1,381 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:23:11 on Feb 27,2020
+# vlog -reportprogress 300 ./snake.sv 
+# -- Compiling module snake
+# -- Compiling module snake_testbench
+# 
+# Top level modules:
+# 	snake_testbench
+# End time: 22:23:11 on Feb 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work snake_testbench 
+# Start time: 22:23:12 on Feb 27,2020
+# Loading sv_std.std
+# Loading work.snake_testbench
+# Loading work.snake
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yangp8  Hostname: DESKTOP-8QDDQ4I  ProcessID: 11016
+#           Attempting to use alternate WLF file "./wlftaeh4b3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftaeh4b3
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/clk'.
+# Executing ONERROR command at macro ./wave.do line 3
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/cleanman'.
+# Executing ONERROR command at macro ./wave.do line 4
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cleaning'.
+# Executing ONERROR command at macro ./wave.do line 5
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/clean'.
+# Executing ONERROR command at macro ./wave.do line 6
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/reset'.
+# Executing ONERROR command at macro ./wave.do line 7
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/cleared'.
+# Executing ONERROR command at macro ./wave.do line 8
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/nextstate'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/write_done'.
+# Executing ONERROR command at macro ./wave.do line 10
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/ps'.
+# Executing ONERROR command at macro ./wave.do line 11
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/ns'.
+# Executing ONERROR command at macro ./wave.do line 12
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/x'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/y'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/x0'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/x1'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/y0'.
+# Executing ONERROR command at macro ./wave.do line 17
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/y1'.
+# Executing ONERROR command at macro ./wave.do line 18
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/lines/tempx0'.
+# Executing ONERROR command at macro ./wave.do line 19
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/lines/tempx1'.
+# Executing ONERROR command at macro ./wave.do line 20
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/lines/tempy0'.
+# Executing ONERROR command at macro ./wave.do line 21
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/cs/lines/tempy1'.
+# Executing ONERROR command at macro ./wave.do line 22
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./snake.sv(111)
+#    Time: 25025 ps  Iteration: 1  Instance: /snake_testbench
+# Break in Module snake_testbench at ./snake.sv line 111
+restart -f
+add wave -position end  sim:/snake_testbench/w21/a
+add wave -position end  sim:/snake_testbench/w21/b
+add wave -position end  sim:/snake_testbench/w21/cleared
+add wave -position end  sim:/snake_testbench/w21/direction
+add wave -position end  sim:/snake_testbench/w21/draw_clk
+add wave -position end  sim:/snake_testbench/w21/i
+add wave -position end  sim:/snake_testbench/w21/j
+add wave -position end  sim:/snake_testbench/w21/length
+add wave -position end  sim:/snake_testbench/w21/reset
+add wave -position end  sim:/snake_testbench/w21/rx
+add wave -position end  sim:/snake_testbench/w21/ry
+add wave -position end  sim:/snake_testbench/w21/score
+add wave -position end  sim:/snake_testbench/w21/square_array
+add wave -position end  sim:/snake_testbench/w21/updatex
+add wave -position end  sim:/snake_testbench/w21/updatey
+add wave -position end  sim:/snake_testbench/w21/write_done
+run -all
+# ** Note: $stop    : ./snake.sv(111)
+#    Time: 25025 ps  Iteration: 1  Instance: /snake_testbench
+# Break in Module snake_testbench at ./snake.sv line 111
+# WARNING: No extended dataflow license exists
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/intelFPGA_lite/17.0/labs/ee371lab6/wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/intelFPGA_lite/17.0/labs/ee371lab6/wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:25:09 on Feb 27,2020
+# vlog -reportprogress 300 ./snake.sv 
+# -- Compiling module snake
+# ** Error: (vlog-13069) ./snake.sv(10): near "=": syntax error, unexpected '='.
+# ** Error: ./snake.sv(10): (vlog-13205) Syntax error found in the scope following 'a'. Is there a missing '::'?
+# End time: 22:25:09 on Feb 27,2020, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./snake.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:25:56 on Feb 27,2020
+# vlog -reportprogress 300 ./snake.sv 
+# -- Compiling module snake
+# -- Compiling module snake_testbench
+# 
+# Top level modules:
+# 	snake_testbench
+# End time: 22:25:56 on Feb 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:26:00 on Feb 27,2020, Elapsed time: 0:02:48
+# Errors: 65, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work snake_testbench 
+# Start time: 22:26:00 on Feb 27,2020
+# Loading sv_std.std
+# Loading work.snake_testbench
+# Loading work.snake
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yangp8  Hostname: DESKTOP-8QDDQ4I  ProcessID: 11016
+#           Attempting to use alternate WLF file "./wlftwznhk7".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftwznhk7
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./snake.sv(112)
+#    Time: 25025 ps  Iteration: 1  Instance: /snake_testbench
+# Break in Module snake_testbench at ./snake.sv line 112
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/intelFPGA_lite/17.0/labs/ee371lab6/wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:29:34 on Feb 27,2020
+# vlog -reportprogress 300 ./snake.sv 
+# -- Compiling module snake
+# -- Compiling module snake_testbench
+# 
+# Top level modules:
+# 	snake_testbench
+# End time: 22:29:34 on Feb 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:29:37 on Feb 27,2020, Elapsed time: 0:03:37
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work snake_testbench 
+# Start time: 22:29:37 on Feb 27,2020
+# Loading sv_std.std
+# Loading work.snake_testbench
+# Loading work.snake
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yangp8  Hostname: DESKTOP-8QDDQ4I  ProcessID: 11016
+#           Attempting to use alternate WLF file "./wlft1b90mz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1b90mz
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./snake.sv(114)
+#    Time: 25025 ps  Iteration: 1  Instance: /snake_testbench
+# Break in Module snake_testbench at ./snake.sv line 114
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:18 on Feb 27,2020
+# vlog -reportprogress 300 ./snake.sv 
+# -- Compiling module snake
+# -- Compiling module snake_testbench
+# 
+# Top level modules:
+# 	snake_testbench
+# End time: 22:30:18 on Feb 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:30:21 on Feb 27,2020, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work snake_testbench 
+# Start time: 22:30:21 on Feb 27,2020
+# Loading sv_std.std
+# Loading work.snake_testbench
+# Loading work.snake
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yangp8  Hostname: DESKTOP-8QDDQ4I  ProcessID: 11016
+#           Attempting to use alternate WLF file "./wlft6i5gi5".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6i5gi5
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./snake.sv(114)
+#    Time: 25025 ps  Iteration: 1  Instance: /snake_testbench
+# Break in Module snake_testbench at ./snake.sv line 114
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:53 on Feb 27,2020
+# vlog -reportprogress 300 ./snake.sv 
+# -- Compiling module snake
+# -- Compiling module snake_testbench
+# 
+# Top level modules:
+# 	snake_testbench
+# End time: 22:30:53 on Feb 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:30:55 on Feb 27,2020, Elapsed time: 0:00:34
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work snake_testbench 
+# Start time: 22:30:55 on Feb 27,2020
+# Loading sv_std.std
+# Loading work.snake_testbench
+# Loading work.snake
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yangp8  Hostname: DESKTOP-8QDDQ4I  ProcessID: 11016
+#           Attempting to use alternate WLF file "./wlft74kfqa".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft74kfqa
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./snake.sv(114)
+#    Time: 250025 ps  Iteration: 1  Instance: /snake_testbench
+# Break in Module snake_testbench at ./snake.sv line 114
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:32:02 on Feb 27,2020
+# vlog -reportprogress 300 ./snake.sv 
+# -- Compiling module snake
+# -- Compiling module snake_testbench
+# 
+# Top level modules:
+# 	snake_testbench
+# End time: 22:32:02 on Feb 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:32:05 on Feb 27,2020, Elapsed time: 0:01:10
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work snake_testbench 
+# Start time: 22:32:05 on Feb 27,2020
+# Loading sv_std.std
+# Loading work.snake_testbench
+# Loading work.snake
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yangp8  Hostname: DESKTOP-8QDDQ4I  ProcessID: 11016
+#           Attempting to use alternate WLF file "./wlfthg685k".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthg685k
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./snake.sv(114)
+#    Time: 25025 ps  Iteration: 1  Instance: /snake_testbench
+# Break in Module snake_testbench at ./snake.sv line 114
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:32:17 on Feb 27,2020
+# vlog -reportprogress 300 ./snake.sv 
+# -- Compiling module snake
+# -- Compiling module snake_testbench
+# 
+# Top level modules:
+# 	snake_testbench
+# End time: 22:32:17 on Feb 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:32:20 on Feb 27,2020, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work snake_testbench 
+# Start time: 22:32:20 on Feb 27,2020
+# Loading sv_std.std
+# Loading work.snake_testbench
+# Loading work.snake
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yangp8  Hostname: DESKTOP-8QDDQ4I  ProcessID: 11016
+#           Attempting to use alternate WLF file "./wlftxsbhcb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftxsbhcb
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./snake.sv(114)
+#    Time: 35025 ps  Iteration: 1  Instance: /snake_testbench
+# Break in Module snake_testbench at ./snake.sv line 114
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:33:21 on Feb 27,2020
+# vlog -reportprogress 300 ./snake.sv 
+# -- Compiling module snake
+# -- Compiling module snake_testbench
+# 
+# Top level modules:
+# 	snake_testbench
+# End time: 22:33:22 on Feb 27,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 22:33:24 on Feb 27,2020, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work snake_testbench 
+# Start time: 22:33:24 on Feb 27,2020
+# Loading sv_std.std
+# Loading work.snake_testbench
+# Loading work.snake
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yangp8  Hostname: DESKTOP-8QDDQ4I  ProcessID: 11016
+#           Attempting to use alternate WLF file "./wlftqvncqv".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqvncqv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./snake.sv(120)
+#    Time: 70025 ps  Iteration: 1  Instance: /snake_testbench
+# Break in Module snake_testbench at ./snake.sv line 120
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:01:49 on Feb 27,2020
+# vlog -reportprogress 300 ./snake.sv 
+# -- Compiling module snake
+# -- Compiling module snake_testbench
+# 
+# Top level modules:
+# 	snake_testbench
+# End time: 23:01:49 on Feb 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:01:51 on Feb 27,2020, Elapsed time: 0:28:27
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work snake_testbench 
+# Start time: 23:01:51 on Feb 27,2020
+# Loading sv_std.std
+# Loading work.snake_testbench
+# Loading work.snake
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yangp8  Hostname: DESKTOP-8QDDQ4I  ProcessID: 11016
+#           Attempting to use alternate WLF file "./wlftbb9r5d".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbb9r5d
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./snake.sv(121)
+#    Time: 70075 ps  Iteration: 1  Instance: /snake_testbench
+# Break in Module snake_testbench at ./snake.sv line 121
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:02:48 on Feb 27,2020
+# vlog -reportprogress 300 ./snake.sv 
+# -- Compiling module snake
+# -- Compiling module snake_testbench
+# 
+# Top level modules:
+# 	snake_testbench
+# End time: 23:02:48 on Feb 27,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:02:51 on Feb 27,2020, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work snake_testbench 
+# Start time: 23:02:51 on Feb 27,2020
+# Loading sv_std.std
+# Loading work.snake_testbench
+# Loading work.snake
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yangp8  Hostname: DESKTOP-8QDDQ4I  ProcessID: 11016
+#           Attempting to use alternate WLF file "./wlftjisct3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjisct3
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./snake.sv(128)
+#    Time: 105125 ps  Iteration: 1  Instance: /snake_testbench
+# Break in Module snake_testbench at ./snake.sv line 128
+# End time: 23:16:47 on Feb 27,2020, Elapsed time: 0:13:56
+# Errors: 0, Warnings: 2

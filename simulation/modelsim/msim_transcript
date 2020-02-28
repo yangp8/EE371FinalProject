@@ -1,0 +1,90 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do DE1_SoC_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/17.0/labs/ee371lab3 {C:/intelFPGA_lite/17.0/labs/ee371lab3/VGA_framebuffer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:10:53 on Feb 04,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/17.0/labs/ee371lab3" C:/intelFPGA_lite/17.0/labs/ee371lab3/VGA_framebuffer.sv 
+# -- Compiling module VGA_framebuffer
+# 
+# Top level modules:
+# 	VGA_framebuffer
+# End time: 00:10:53 on Feb 04,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/17.0/labs/ee371lab3 {C:/intelFPGA_lite/17.0/labs/ee371lab3/line_drawerbackup.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:10:53 on Feb 04,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/17.0/labs/ee371lab3" C:/intelFPGA_lite/17.0/labs/ee371lab3/line_drawerbackup.sv 
+# -- Compiling module line_drawerbackup
+# -- Compiling module line_drawerbackup_testbench
+# 
+# Top level modules:
+# 	line_drawerbackup_testbench
+# End time: 00:10:54 on Feb 04,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/17.0/labs/ee371lab3 {C:/intelFPGA_lite/17.0/labs/ee371lab3/DE1_SoC.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:10:54 on Feb 04,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/17.0/labs/ee371lab3" C:/intelFPGA_lite/17.0/labs/ee371lab3/DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 00:10:54 on Feb 04,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.DE1_SoC_testbench
+# vsim work.DE1_SoC_testbench 
+# Start time: 00:11:18 on Feb 04,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.VGA_framebuffer
+# Loading work.line_drawerbackup
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/absx
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/absy
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/cleaning
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/clk
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/count
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/cx
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/cy
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/delta_x
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/delta_y
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/error
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/is_steep
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/ns
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/ps
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/r2l
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/reset
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/rx
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/ry
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/tempx0
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/tempx1
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/tempy0
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/tempy1
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/x
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/x0
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/x1
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/xil
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/y
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/y0
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/y1
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/y_step
+add wave -position end  sim:/DE1_SoC_testbench/dut/lines/yil
+run -all
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/labs/ee371lab3/DE1_SoC.sv(134)
+#    Time: 50150 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at C:/intelFPGA_lite/17.0/labs/ee371lab3/DE1_SoC.sv line 134
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/intelFPGA_lite/17.0/labs/ee371lab3/simulation/modelsim/wave.do
+# End time: 00:16:40 on Feb 04,2020, Elapsed time: 0:05:22
+# Errors: 0, Warnings: 0

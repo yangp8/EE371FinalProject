@@ -1,0 +1,138 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/17.0/labs/ee371lab3/simulation/modelsim
+vDE1_SoC
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1580803854
+!i10b 1
+!s100 Ra8[Te0Gd>4WBWS8:a91J0
+IWB]7GkbBMXfk3CRN2SH0D2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 DE1_SoC_sv_unit
+S1
+R0
+Z5 w1580803752
+Z6 8C:/intelFPGA_lite/17.0/labs/ee371lab3/DE1_SoC.sv
+Z7 FC:/intelFPGA_lite/17.0/labs/ee371lab3/DE1_SoC.sv
+L0 1
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1580803854.000000
+Z10 !s107 C:/intelFPGA_lite/17.0/labs/ee371lab3/DE1_SoC.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA_lite/17.0/labs/ee371lab3|C:/intelFPGA_lite/17.0/labs/ee371lab3/DE1_SoC.sv|
+!i113 1
+Z12 o-sv -work work
+Z13 !s92 -sv -work work +incdir+C:/intelFPGA_lite/17.0/labs/ee371lab3
+Z14 tCvgOpt 0
+n@d@e1_@so@c
+vDE1_SoC_testbench
+R1
+R2
+!i10b 1
+!s100 M:;fhzT>S:SbM[bj]c67Z1
+IBWa_gEO;6d]PM][Ooz3423
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 100
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+n@d@e1_@so@c_testbench
+vline_drawerbackup
+R1
+Z15 !s110 1580803853
+!i10b 1
+!s100 dcf]b[3b]gk23aZhQ?maf1
+I78H^98;cO0K:iRj77;a<N0
+R3
+Z16 !s105 line_drawerbackup_sv_unit
+S1
+R0
+Z17 w1580803743
+Z18 8C:/intelFPGA_lite/17.0/labs/ee371lab3/line_drawerbackup.sv
+Z19 FC:/intelFPGA_lite/17.0/labs/ee371lab3/line_drawerbackup.sv
+L0 2
+R8
+r1
+!s85 0
+31
+Z20 !s108 1580803853.000000
+Z21 !s107 C:/intelFPGA_lite/17.0/labs/ee371lab3/line_drawerbackup.sv|
+Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA_lite/17.0/labs/ee371lab3|C:/intelFPGA_lite/17.0/labs/ee371lab3/line_drawerbackup.sv|
+!i113 1
+R12
+R13
+R14
+vline_drawerbackup_testbench
+R1
+R15
+!i10b 1
+!s100 f33WLnz;;?STRc_fHBT2m0
+IO3lAndP@>XWmn2PPdE<cS2
+R3
+R16
+S1
+R0
+R17
+R18
+R19
+L0 107
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R12
+R13
+R14
+vVGA_framebuffer
+R1
+R15
+!i10b 1
+!s100 SAf9?AgIzngjVX;Di_QRV1
+I<5@oz[E2jkm93=S3Yo`k]1
+R3
+!s105 VGA_framebuffer_sv_unit
+S1
+R0
+w1580779101
+8C:/intelFPGA_lite/17.0/labs/ee371lab3/VGA_framebuffer.sv
+FC:/intelFPGA_lite/17.0/labs/ee371lab3/VGA_framebuffer.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R20
+!s107 C:/intelFPGA_lite/17.0/labs/ee371lab3/VGA_framebuffer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA_lite/17.0/labs/ee371lab3|C:/intelFPGA_lite/17.0/labs/ee371lab3/VGA_framebuffer.sv|
+!i113 1
+R12
+R13
+R14
+n@v@g@a_framebuffer

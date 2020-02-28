@@ -1,0 +1,3 @@
+module deadPrints ();
+	if(dead)
+endmodule
