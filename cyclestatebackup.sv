@@ -1,4 +1,4 @@
-`timescale 1 ns / 1 ps
+//`timescale 1 ns / 1 ps
 
 module cyclestatebackup(
 	input logic /*[31:0]*/clk, 
