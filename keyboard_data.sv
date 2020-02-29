@@ -40,11 +40,13 @@ module keyboard_data(clk, PS2_DAT, PS2_CLK, data_out, LEDR);
    end
 
    logic [7:0] val;
-   
+   logic rightkey;
+	assign rightkey = ((outCode == 8'h1D) || (outCode == 8'h1C) || (outCode == 8'h1B) || (outCode == 8'h23));
+	assign reverse = (outCode==8'h1D&&val==8'h1B)||(outCode==8'h1C&&val==8'h23)
+						||(outCode==8'h1B&&val==8'h1D)||(outCode==8'h23&&val==8'h1C);
    always_ff @(posedge clk) begin
-      if ((val != outCode) && ((outCode == 8'h1D) || (outCode == 8'h1C) || (outCode == 8'h1B) || (outCode == 8'h23)))
+      if ((val != outCode)&&rightkey)
          val <= outCode;
-   
    end
 
 
