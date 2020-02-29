@@ -1,16 +1,19 @@
 module printOut(
 	input logic clk, draw_clk, reset,
    input logic [1:0] direction,
+	//output logic [3:0] score,
 	output logic [9:0] x,
 	output logic [8:0] y,
 	output logic pixel_color
 );
-	logic [9:0] cx, rx;
-	logic [8:0] cy, ry;
+	logic [9:0] cx, rx, headx;
+	logic [8:0] cy, ry, heady;
+	logic [9:0] foodx [8:0];
+	logic [8:0] foody [8:0];
 	logic write_done;
-   logic [31:0]score;
+   logic [3:0]score;
 	logic dead, cleared;
-	assign score=5;
+	//assign score=5;
 	
 	assign dead=0;
 	always_comb begin
@@ -19,9 +22,10 @@ module printOut(
 	end
 	
 	state cl (.clk, .draw_clk, .reset, .write_done, .x(cx), .y(cy), .cleared);
-	snake blocks (.draw_clk, .reset, .cleared, .score, .direction,
-				      .write_done, .rx, .ry,);
-
+	snake blocks (.draw_clk, .reset, .cleared, .score, .direction, .foodx, .foody,
+				      .write_done, .headx, .heady, .rx, .ry);
+	scoreCounter sc(.clk(write_done), .reset, .headx, .heady, .foodx, .foody, .score);
+	foodGenerator gene(.clk, .reset, .write_done, .foodx, .foody);
 	
 	assign x = (write_done) ? cx : rx;
 	assign y = (write_done) ? cy : ry;

@@ -50,7 +50,7 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 	printOut p1 (.clk(CLOCK_50), .draw_clk(clk[whichClock]), .reset, .direction, .x, .y, .pixel_color);
    
    keyboard_data keyboard (.clk(CLOCK_50), .PS2_DAT, .PS2_CLK, .data_out(direction), .LEDR);
-
+	//score-2 is the point to show on hex
 endmodule
 
 module DE1_SoC_testbench();

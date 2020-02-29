@@ -1,10 +1,12 @@
 module snake #(parameter length=15)(
 	input logic draw_clk, reset, cleared, 
-	input logic [31:0]score, 
+	input logic [3:0]score, 
 	input logic [1:0] direction,
-	input logic [9:0] foodx [99:0],
-	input logic [8:0] foody [99:0],
+	input logic [9:0] foodx [8:0],
+	input logic [8:0] foody [8:0],
 	output logic write_done, 
+	output logic [9:0] headx,
+	output logic [8:0] heady,
 	output logic [9:0]rx, output logic [8:0]ry);
 
 	//logic signed [length:0] reg_x[9:0];
@@ -73,20 +75,23 @@ module snake #(parameter length=15)(
 				rx <= square_array[a].square_x[b];
 				ry <= square_array[a].square_y[b];
 				
-			if(b<99) begin	
+			if(b<100) begin	
 				b <= b+1;
 			end else begin
 				a <= a+1;
 				b <= 0;
 			end
 		end 
-		else if(c < 99) begin
+		else if(c < 9) begin
 			rx <= foodx[c];
 			ry <= foody[c];
 			c <= c+1;
 		end
 		else write_done <= 1;
 	end
+	
+	assign headx = square_array[0].square_x[44];
+	assign heady = square_array[0].square_y[44];
 	
 endmodule
 
