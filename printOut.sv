@@ -1,5 +1,6 @@
 module printOut(
-	input logic clk, draw_clk,reset,
+	input logic clk, draw_clk, reset,
+   input logic [1:0] direction,
 	output logic [9:0] x,
 	output logic [8:0] y,
 	output logic pixel_color
@@ -8,8 +9,7 @@ module printOut(
 	logic [8:0] cy, ry;
 	logic write_done;
    logic [31:0]score;
-	logic [1:0] direction;
-	logic dead;
+	logic dead, cleared;
 	assign score=5;
 	
 	assign dead=0;

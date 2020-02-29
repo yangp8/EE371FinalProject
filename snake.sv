@@ -11,15 +11,15 @@ module snake #(parameter length=15)(
 	//logic signed [length:0] reg_y[8:0];
 	integer i, j, a, b, c;
 
-	logic signed [9:0] updatex;
-	logic signed [8:0] updatey;
+	logic [9:0] updatex;
+	logic [8:0] updatey;
 	
 	typedef struct{
-		logic signed  [9:0]square_x[99:0];
-		logic signed  [8:0]square_y[99:0];
+		logic  [9:0]square_x[99:0];
+		logic  [8:0]square_y[99:0];
 	}square;
 	
-	 square  square_array[length:0];
+	 square  square_array[15:0];
 
 	always_comb begin
 		case(direction)
@@ -34,7 +34,7 @@ module snake #(parameter length=15)(
 
 	always_ff @(posedge write_done,posedge reset) begin
 		if(reset) begin
-			for(i =0; i<score;i=i+1) begin
+			for(i =0; i<5;i=i+1) begin
 				for(j=0;j<100;j=j+1) begin
 					square_array[i].square_x[j] <= j%10;
 					square_array[i].square_y[j] <= j/10;
@@ -48,7 +48,7 @@ module snake #(parameter length=15)(
 				square_array[0].square_x[j] <= square_array[0].square_x[j]+updatex;
 				square_array[0].square_y[j] <= square_array[0].square_y[j]+updatey;
 			end
-			for(i=1; i<score;i=i+1) begin
+			for(i=1; i<5;i=i+1) begin
 				//reg_x[i] <= reg_x[i-1];
 				//reg_y[i] <= reg_y[i-1];
 				for(j=0;j<100;j=j+1) begin
@@ -91,50 +91,50 @@ module snake #(parameter length=15)(
 endmodule
 
 
-module snake_testbench ();
-
-	parameter ClockDelay = 50;
-
-
-	 logic draw_clk, reset, cleared;
-	 logic [31:0] score;
-	 logic [1:0] direction;
-	 logic write_done;
-	 logic [9:0]rx;  logic [8:0]ry;
-	 integer i;
-	 snake w21 (.*);
-	// Force %t's to print in a nice format.
-	initial $timeformat(-9, 2, " ns", 10);
-
-	initial begin // Set up the clock
-		draw_clk <= 0;
-		forever #(ClockDelay/2) draw_clk <= ~draw_clk;
-	end
-
-	initial begin
-		reset <=1; score <= 5; direction <= 2'b01; cleared <= 0;
-		@(posedge draw_clk); reset <= 0;
-		for (i=0; i<700; i=i+1) begin
-		
-			@(posedge draw_clk);
-			
-		end
-		cleared <= 1;// score <= 6;
-		@(posedge draw_clk);cleared <= 0;
-		for (i=0; i<700; i=i+1) begin
-		
-			@(posedge draw_clk);
-			
-		end
-				cleared <= 1; score <= 8;
-		@(posedge draw_clk);cleared <= 0;
-		for (i=0; i<700; i=i+1) begin
-		
-			@(posedge draw_clk);
-			
-		end
-	$stop;
-	end
-endmodule
-
-	
+//module snake_testbench ();
+//
+//	parameter ClockDelay = 50;
+//
+//
+//	 logic draw_clk, reset, cleared;
+//	 logic [31:0] score;
+//	 logic [1:0] direction;
+//	 logic write_done;
+//	 logic [9:0]rx;  logic [8:0]ry;
+//	 integer i;
+//	 snake w21 (.*);
+//	// Force %t's to print in a nice format.
+//	initial $timeformat(-9, 2, " ns", 10);
+//
+//	initial begin // Set up the clock
+//		draw_clk <= 0;
+//		forever #(ClockDelay/2) draw_clk <= ~draw_clk;
+//	end
+//
+//	initial begin
+//		reset <=1; score <= 5; direction <= 2'b01; cleared <= 0;
+//		@(posedge draw_clk); reset <= 0;
+//		for (i=0; i<700; i=i+1) begin
+//		
+//			@(posedge draw_clk);
+//			
+//		end
+//		cleared <= 1;// score <= 6;
+//		@(posedge draw_clk);cleared <= 0;
+//		for (i=0; i<700; i=i+1) begin
+//		
+//			@(posedge draw_clk);
+//			
+//		end
+//				cleared <= 1; score <= 8;
+//		@(posedge draw_clk);cleared <= 0;
+//		for (i=0; i<700; i=i+1) begin
+//		
+//			@(posedge draw_clk);
+//			
+//		end
+//	$stop;
+//	end
+//endmodule
+//
+//	

@@ -1,12 +1,13 @@
 `timescale 1 ns / 1 ps
 
 module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50, 
-	VGA_R, VGA_G, VGA_B, VGA_BLANK_N, VGA_CLK, VGA_HS, VGA_SYNC_N, VGA_VS);
+	VGA_R, VGA_G, VGA_B, VGA_BLANK_N, VGA_CLK, VGA_HS, VGA_SYNC_N, VGA_VS, PS2_DAT, PS2_CLK);
 	
 	output logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
 	output logic [9:0] LEDR;
 	input logic [3:0] KEY;
 	input logic [9:0] SW;
+   inout logic PS2_DAT, PS2_CLK;
 
 	input CLOCK_50;
 	output [7:0] VGA_R;
@@ -24,26 +25,31 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 	assign HEX3 = '1;
 	assign HEX4 = '1;
 	assign HEX5 = '1;
-	assign LEDR = SW;
+//	assign LEDR = SW;
 	assign cleanman = ~KEY[3];
 	assign reset = ~KEY[2];
 	//assign cleaning  = ~KEY[1];
 	logic [9:0] x0, x1, x, cx, rx;
 	logic [8:0] y0, y1, y, cy, ry;
+   logic [1:0] direction;
 	logic frame_start;
 	logic pixel_color;
 	logic clean, cleaning;
-	 	logic [31:0] clk;
-	parameter whichClock = 20;
+	logic [31:0] clk;
+	parameter whichClock = 10;
+   
+   
 
- //  clock_divider cdivin (.clock(CLOCK_50), .divided_clocks(clk));
+   clock_divider cdivin (.clock(CLOCK_50), .divided_clocks(clk));
 	VGA_framebuffer fb(.clk(CLOCK_50), .rst(reset), .x, .y,
 				.pixel_color, .pixel_write(1'b1), .frame_start,
 				.VGA_R, .VGA_G, .VGA_B, .VGA_CLK, .VGA_HS, .VGA_VS,
 				.VGA_BLANK_N, .VGA_SYNC_N);
 	
 
-	printOut p1 (.clk, .draw_clk, .reset, .x, .y, .pixel_color);	
+	printOut p1 (.clk(CLOCK_50), .draw_clk(clk[whichClock]), .reset, .direction, .x, .y, .pixel_color);
+   
+   keyboard_data keyboard (.clk(CLOCK_50), .PS2_DAT, .PS2_CLK, .data_out(direction), .LEDR);
 
 endmodule
 
