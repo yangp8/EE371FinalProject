@@ -13,6 +13,7 @@ module printOut(
 	logic write_done;
    logic [3:0]score;
 	logic dead, cleared;
+	logic waited;
 	//assign score=5;
 	
 	assign dead=0;
@@ -21,12 +22,12 @@ module printOut(
 		else pixel_color = 1'b0;
 	end
 	
-	state cl (.clk, .draw_clk, .reset, .write_done, .x(cx), .y(cy), .cleared);
+	state cl (.clk, .draw_clk, .reset, .waited, .x(cx), .y(cy), .cleared);
 	snake blocks (.draw_clk, .reset, .cleared, .score, .direction, .foodx, .foody,
 				      .write_done, .headx, .heady, .rx, .ry);
-	scoreCounter sc(.clk(write_done), .reset, .headx, .heady, .foodx, .foody, .score);
+	scoreCounter sc(.clk(draw_clk), .reset, .headx, .heady, .foodx, .foody, .score);
 	foodGenerator gene(.clk, .reset, .write_done, .foodx, .foody);
-	
+	counter (.clk, .reset, .write_done, .waited);
 	assign x = (write_done) ? cx : rx;
 	assign y = (write_done) ? cy : ry;
 	

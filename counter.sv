@@ -1,18 +1,35 @@
 //a counter that loops from 0 to 31
 //go through whole read address based on clock
-module counter (start, clk, reset, write_done, cleared);
-	output logic start;
-	input logic clk, reset, write_done, cleared;
-	logic [10:0] count;
+module counter (
+	input logic clk, reset, write_done,
+	output logic waited);
 	
-
-
+	logic [31:0] count;
 	
-	always_ff @(posedge clk) begin
-		if(reset||~write_done||cleared) begin count <= 0; start <= 0; end
-		else if (count == 10'b1111111) begin count <= count; start <= 1; end
-		else begin count <= count + 1; start <= 0; end
+	enum{normal, waiting} ns, ps;
+	logic [31:0] count;
+	always_comb begin
+		case(ps)
+			
+			normal: begin if(write_done) ns = waiting; else ns = ps;  end
+			waiting: begin if(waited) ns = normal; else ns = ps;  end
+		endcase
 	end
+
+	always_ff @(posedge clk) begin
+		if(reset||~write_done) begin
+			ps <= normal;
+			count <= 0;
+			waited <= 0;
+		end 
+		else	
+		if( count <= 1000000 ) begin
+			count <= count + 1;
+		end else   waited <= 1; 
+		ps <= ns;
+	end
+	
+
 endmodule
 
 

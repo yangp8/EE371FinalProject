@@ -1,7 +1,7 @@
 `timescale 1 ns / 1 ps
 
 module state(
-	input logic clk, draw_clk, reset, write_done, //nextstate, cleanman,
+	input logic clk, draw_clk, reset, waited, //nextstate, cleanman,
 	output logic [9:0] x,
 	output logic [8:0] y,
 	output logic cleared
@@ -11,13 +11,13 @@ module state(
 	always_comb begin
 		case(ps)
 			
-			normal: begin if(write_done/*||cleanman*/) ns = cleans; else ns = ps;  end
+			normal: begin if(waited) ns = cleans; else ns = ps;  end
 			cleans: begin if(cleared) ns = normal; else ns = ps;  end
 		endcase
 	end
 	
 	always_ff @(posedge clk) begin
-		if(reset||~write_done) begin
+		if(reset||~waited) begin
 			x <= 0;
 			y <= 0;
 			ps <= normal;
