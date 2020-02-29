@@ -2,12 +2,14 @@ module snake #(parameter length=15)(
 	input logic draw_clk, reset, cleared, 
 	input logic [31:0]score, 
 	input logic [1:0] direction,
+	input logic [9:0] foodx [99:0],
+	input logic [8:0] foody [99:0],
 	output logic write_done, 
 	output logic [9:0]rx, output logic [8:0]ry);
 
 	//logic signed [length:0] reg_x[9:0];
 	//logic signed [length:0] reg_y[8:0];
-	integer i, j, a, b;
+	integer i, j, a, b, c;
 
 	logic signed [9:0] updatex;
 	logic signed [8:0] updatey;
@@ -63,6 +65,7 @@ module snake #(parameter length=15)(
 		if(reset||cleared) begin
 			if(a>=score||reset)a <= 0;
 			if(b>=99||reset)b <= 0;
+			if(c>=99||reset)c <= 0;
 			write_done <= 0;
 	
 		end 
@@ -77,6 +80,11 @@ module snake #(parameter length=15)(
 				b <= 0;
 			end
 		end 
+		else if(c < 99) begin
+			rx <= foodx[c];
+			ry <= foody[c];
+			c <= c+1;
+		end
 		else write_done <= 1;
 	end
 	

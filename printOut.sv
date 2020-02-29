@@ -11,6 +11,7 @@ module printOut(
 	logic [1:0] direction;
 	logic dead;
 	assign score=5;
+	
 	assign dead=0;
 	always_comb begin
 		if(~write_done||dead) pixel_color = 1'b1;
