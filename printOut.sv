@@ -20,13 +20,12 @@ module printOut(
 	state cl (.clk, .draw_clk, .reset, .write_done, .x(cx), .y(cy), .cleared);
 	snake blocks (.draw_clk, .reset, .cleared, .score, .direction,
 				      .write_done, .rx, .ry,);
-	dead icon ();
+
 	
-	assign normalx = (write_done) ? cx : rx;
-	assign normaly = (write_done) ? cy : ry;
+	assign x = (write_done) ? cx : rx;
+	assign y = (write_done) ? cy : ry;
 	
-//	assign x = dead ? deadx : normalx;
-//	assign y = dead ? deady : normaly;
+   
 	
 	
 
